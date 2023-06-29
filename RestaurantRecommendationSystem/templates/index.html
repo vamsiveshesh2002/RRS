@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<link rel="stylesheet"  href="{{url_for('static',filename='css/main.css')}}">
+
+{% endblock %}
+
+{% block body %} 
+
+<script>
+    function myFunction1(){
+        window.location.href="/search";
+    }
+</script>
+<div class="topnav">
+   <h1>Restaraunt Recommendation System</h1>
+        <a href="{{url_for('home')}}">Home </a>
+        <a href="{{url_for('search')}}">Recommend</a>
+    </div>
+<br>
+<br>
+
+
+<p><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="img"> 
+<div class="bx">
+This case study covers a very important business problem which is recommender systems. as we are in rapid consumption of content and commodities ordered by online delivery apps.
+Challenges for these apps increase as they always want to keep their customer happy and wants to reduce their time.One major place where customer spends lots of their time is in searching for products. 
+Sometimes a consumer may know what product they are willing to buy but mostly don’t.Remember last time you ordered food online what took you most time whether it was to order your food, make the payment 
+or it was to hunt for the best vendor from where you can order your food or which caters to all your taste buds. mostly your answer will be you struggle most in hunting for the best vendors or restaurants.
+Now imagine the last time when you wished to order some clothes and what you were aware of is that you wish to get a shirt/top with polka dots as they were in fashion but once you are on amazon you struggle 
+in finding the best design as there may be more than millions of polka dot pattern shirt in that case what you prefer is scrolling to recommended part and 40% of times you end up ordering items from recommended 
+tabs.
+
+So this problem accounts for major purchases in e-commerce and e-content-based apps, not just these 2 the list goes on and on.
+</p></div>
+
+<input type="button" value="Test Now" onclick="myFunction1()"></input>
+
+{% endblock %}
