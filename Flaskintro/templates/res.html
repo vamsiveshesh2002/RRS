@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet"  href="{{url_for('static',filename='css/main.css')}}">
+<title>Result</title>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="topnav">
+    <h1>Restaraunt Recommendation</h1>
+         <a href="{{url_for('home')}}">Home</a>
+         <a href="{{url_for('search')}}">Recommend</a>
+     </div>
+ <br>
+ <br>
+
+<table>
+    <tr>
+      <th>Recommended Restaraunts   </th>
+      <tr>
+    {% for res in rest %}
+    <tr>
+        <tr>
+          <td name={{res}}>{{res}}</td>
+        </tr>
+      {% endfor %}
+    </tr>
+  </table>
+{% endblock %}
